@@ -1,10 +1,6 @@
-$('.grid').masonry({
-  // options
-  itemSelector: '.grid-item',
-  columnWidth: 200
-});
-// element argument can be a selector string
-//   for an individual element
-var msnry = new Masonry( '.grid', {
-  // options
+$('.cards').masonry({
+  itemSelector: '.card',
+  columnWidth: 250,
+  gutter: 20,
+  fitWidth: true
 });

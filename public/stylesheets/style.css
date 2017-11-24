@@ -1,4 +1,5 @@
 body {
+  background: #EEE;
 }
 
 a {
@@ -13,34 +14,34 @@ a {
   padding: 5em;
 }
 
-.grid {
-  background: #EEE;
+* {
+  box-sizing: border-box;
+}
+
+.cards {
   max-width: 1200px;
+  margin: 0 auto;
 }
-
-/* clearfix */
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
+.cards .card {
+  width: 250px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 0 #ccc;
 }
-
-/* ---- grid-item ---- */
-
-.grid-item {
-  width: 160px;
-  height: 120px;
-  float: left;
-  background: #D26;
-  border: 2px solid #333;
-  border-color: hsla(0, 0%, 0%, 0.5);
-  border-radius: 5px;
+.cards .card .card-content {
+  min-height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  border: 1px solid #ccc;
+  color: #fff;
+  background-color: #607EA4;
 }
-
-.grid-item--width2 { width: 320px; }
-.grid-item--width3 { width: 480px; }
-.grid-item--width4 { width: 640px; }
-
-.grid-item--height2 { height: 200px; }
-.grid-item--height3 { height: 260px; }
-.grid-item--height4 { height: 360px; }
+.cards .card .card-content.height-med {
+  height: 250px;
+}
+.cards .card .card-content.height-lg {
+  height: 325px;
+}
