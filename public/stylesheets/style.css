@@ -43,6 +43,20 @@ a {
   border: 1px solid #ccc;
 }
 
+.cards .card .card-title {
+  width: 244px;
+  height: 30px;
+  border: border: 2px solid gray;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  padding-top: 11px;
+  border: 1px solid #ccc;
+  background-color: #e8e8e8;
+}
+
 .cards .card .card-bot {
   width: 244px;
   height: 60px;
@@ -53,7 +67,7 @@ a {
   align-items: center;
   margin: 2px;
   border: 1px solid #ccc;
-  background-color: grey;
+  background-color: #e8e8e8;
 }
 
 .cards .card .card-content {
