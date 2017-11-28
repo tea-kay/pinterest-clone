@@ -18,6 +18,14 @@ a {
   box-sizing: border-box;
 }
 
+.my-pins:hover {
+  background-color: #e7e7e7;
+}
+
+.add-pin {
+  margin-right: 10px;
+}
+
 .cards {
   max-width: 1200px;
   margin: 0 auto;
