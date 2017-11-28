@@ -26,10 +26,9 @@
     </div>
     <div class="container app-body">
       <!-- Modal -->
-      <div id="myModal" class="modal fade" role="dialog">
+      <div id="myModal" class="modal fade new-pin-modal" role="dialog">
         <div class="modal-dialog add-pin-modal">
-
-          <!-- Modal content-->
+          <!-- Modal Content-->
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -38,12 +37,12 @@
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="recipient-name" class="col-form-label">URL:</label>
-                  <input type="text" class="form-control" id="recipient-name">
+                  <label for="new-pin-url" class="col-form-label">URL:</label>
+                  <input type="text" class="form-control" id="new-pin-url">
                 </div>
                 <div class="form-group">
-                  <label for="message-text" class="col-form-label">Description:</label>
-                  <textarea class="form-control" id="message-text"></textarea>
+                  <label for="pin-description" class="col-form-label">Description:</label>
+                  <textarea class="form-control" id="pin-description"></textarea>
                 </div>
               </form>
             </div>
@@ -52,9 +51,10 @@
               <button type="button" class="btn btn-primary">Save Pin</button>
             </div>
           </div>
-
+          <!-- Modal Content Ends-->
         </div>
       </div>
+      <!-- Modal Ends -->
       <div class="cards">
         <div class="card">
           <!-- <div class="card-content"> -->
