@@ -29,11 +29,12 @@ a {
   background-color: #fff;
   box-shadow: 0px 2px 4px 0 #ccc;
 }
+
 .card:hover {
   box-shadow: 0px 4.5px 4px 0 rgba(0,0,0,0.4);
 }
 
-.cards .card img{
+.cards .card .card-img {
   max-width: 244px;
   vertical-align: middle;
   display: flex;
@@ -41,6 +42,11 @@ a {
   align-items: center;
   margin: 2px;
   border: 1px solid #ccc;
+}
+
+.cards .card .card-img img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .cards .card .card-title {
@@ -59,11 +65,11 @@ a {
 
 .cards .card .card-bot {
   width: 244px;
-  height: 60px;
+  height: 50px;
   border: border: 2px solid gray;
   vertical-align: middle;
   display: flex;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
   margin: 2px;
   border: 1px solid #ccc;
@@ -83,8 +89,23 @@ a {
 
 .cards .card .card-content .card-bot {
   width: 250px;
-  height: 40px;
+  height: 35px;
   border: border: 1px solid gray;
+}
+
+.user-img img {
+  width: 35px;
+  height: 35px;
+  border: border: 1px solid gray;
+  margin-left: 5px;
+}
+
+.like-button {
+  margin-left: 155px;
+}
+
+.like-button button {
+  height: 30px;
 }
 
 .cards .card .card-content.height-med {
@@ -92,14 +113,4 @@ a {
 }
 .cards .card .card-content.height-lg {
   height: 325px;
-}
-
-.cards .card img{
-  max-width: 244px;
-  vertical-align: middle;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 2px;
-  border: 1px solid #ccc;
 }
