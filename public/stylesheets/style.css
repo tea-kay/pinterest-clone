@@ -111,12 +111,27 @@ a {
   margin-left: 5px;
 }
 
+.pin-delete {
+  position: absolute;
+  margin: 5px 0px 0px 217px;
+  float: right;
+  border: none;
+  background: none;
+  font-weight: bold;
+}
+
+.pin-delete:hover {
+  color: black;
+  border: 1px solid black;
+}
+
 .like-button {
-  margin-left: 155px;
+  margin-left: 145px;
 }
 
 .like-button button {
   height: 30px;
+  width: 50px;
 }
 
 .cards .card .card-content.height-med {
