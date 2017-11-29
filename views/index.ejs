@@ -78,8 +78,10 @@
         </div>
         <% pins.forEach(function(pin) { %>
           <div class="card">
-            <!-- <div class="card-content"> -->
-            <button type="button" class="pin-delete">X</button>
+            <!-- Delete button -->
+            <form action=<%= "/pins/delete/" +  pin.id %>  method="post">
+              <button type="button submit" class="pin-delete">X</button>
+            </form>
             <div class="card-img">
               <img src="<%= pin.url %>"/>
             </div>
@@ -96,7 +98,6 @@
             </div>
           </div>
         <% }) %>
-          <!-- </div> -->
         <div class="card"><div class="card-content height-lg">2</div></div>
         <div class="card"><div class="card-content">3</div></div>
         <div class="card"><div class="card-content">4</div></div>

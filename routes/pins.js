@@ -16,4 +16,12 @@ router.post('/add', function(req, res, next) {
   })
 });
 
+router.post('/delete/:id', function(req, res, next) {
+
+  Pin.findByIdAndRemove({ _id:req.query.id }, function(err, res) {
+    if (err) return next(err);
+    res.redirect('/');
+
+  })
+});
 module.exports = router;
