@@ -21,7 +21,7 @@ router.post('/delete/:id', function(req, res, next) {
   Pin.findByIdAndRemove(req.params.id, (err, res) => {
     if (err) return next(err);
   })
-  res.status(200).send('/');
+  res.status(200).redirect('/');
 
 });
 module.exports = router;
