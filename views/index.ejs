@@ -39,11 +39,11 @@
                 <div class="form-group">
                   <div class="form-group">
                     <label for="new-pin-url" class="col-form-label">Pin Url:</label>
-                    <input type="text" class="form-control" id="new-pin-url" name="pinURL">
+                    <input type="url" class="form-control" id="new-pin-url" name="pinURL" required>
                   </div>
                   <div class="form-group">
                     <label for="pin-description" class="col-form-label">Pin Description:</label>
-                    <input type="text" class="form-control" id="pin-description" name="pinDescription">
+                    <input type="text" class="form-control" id="pin-description" name="pinDescription" required>
                   </div>
                 </div>
                 <div class="modal-footer">
@@ -83,7 +83,7 @@
               <button type="button submit" class="pin-delete">X</button>
             </form>
             <div class="card-img">
-              <img src="<%= pin.url %>"/>
+              <img src="<%= pin.url %>" onerror="if (this.src != '/images/default.png') this.src = '/images/default.png';"/>
             </div>
             <div class="card-title">
               <p><%= pin.description %> </p>
