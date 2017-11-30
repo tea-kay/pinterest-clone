@@ -18,10 +18,10 @@ router.post('/add', function(req, res, next) {
 
 router.post('/delete/:id', function(req, res, next) {
 
-  Pin.findByIdAndRemove({ _id:req.query.id }, function(err, res) {
+  Pin.findByIdAndRemove(req.params.id, (err, res) => {
     if (err) return next(err);
-    res.redirect('/');
-
   })
+  res.status(200).send('/');
+
 });
 module.exports = router;
