@@ -1,10 +1,14 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var passport = require('passport');
+var Strategy = require('passport-twitter').Strategy;
+var session = require('express-session');
+require('dotenv').config()
+
 var index = require('./routes/index');
 var users = require('./routes/users');
 var pins = require('./routes/pins');
@@ -14,18 +18,35 @@ var app = express();
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/pinterest-clone', {
   useMongoClient: true
 })
+// twitter Oauth
+passport.use(new Strategy({
+  consumerKey: process.env.CONSUMER_KEY,
+  consumerSecret: process.env.CONSUMER_SECRET,
+  callbackURL: 'http://localhost:3000/twitter/auth/callback'
+}, (token, tokenSecret, profile, callback) => {
+  return callback(null, profile);
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(session({ secret: 'whatever', resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.serializeUser((user, callback) => {
+  callback(null, user);
+})
+passport.deserializeUser((obj, callback) => {
+  callback(null, obj);
+})
 
 app.use('/', index);
 app.use('/users', users);
