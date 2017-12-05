@@ -3,6 +3,7 @@ const Schema = mongoose.Schema
 
 const PinSchema = new Schema({
   user: String,
+  userImg: String,
   url: String,
   description: String,
   likes: { type: Number, default: 0 }

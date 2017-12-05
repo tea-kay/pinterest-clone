@@ -26,9 +26,8 @@ passport.deserializeUser((obj, callback) => {
 /* GET home page. */
 router.get('/', function(req, res, next) {
   Pin.find({}, (err, pins) => {
-    console.log('my user ojb', req.user)
     if (err) return next(err);
-    res.render('index', { title: 'Pinterest Clone', pins, user: req.user });
+    res.render('index', { title: 'Pinterest Clone', pins });
   })
 });
 

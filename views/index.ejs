@@ -94,7 +94,7 @@
             </div>
             <div class="card-bot">
               <div class="user-img">
-                <img src="/images/abstract-user-flat-1.svg">
+                <img src="<%= pin.userImg %>" onerror="if (this.src != '/images/abstract-user-flat-1.svg') this.src = '/images/abstract-user-flat-1.svg';">
               </div>
               <div class="like-button">
                 <button type="button" name="button">&#x2606; <%= pin.likes %></button>
